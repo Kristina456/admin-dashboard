@@ -1,0 +1,24 @@
+@use '@/styles' as *;
+
+.dashboard-layout {
+  background-color: $color-primary;
+
+  &__navigation {
+    background-color: $color-secondary;
+    height: $navigation-height;
+  }
+
+  &__main {
+    display: flex;
+    height: calc(100vh - $navigation-height);
+  }
+
+  &__main-section {
+    flex: 1;
+    background-color: $color-tertiary;
+  }
+
+  &__sidebar {
+    width: 20rem;
+  }
+}
