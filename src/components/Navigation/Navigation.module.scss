@@ -6,4 +6,16 @@
   padding: 0 2rem;
   height: $navigation-height;
   align-items: center;
+
+  &__user-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__button {
+    height: 2rem;
+    width: 10rem;
+  }
 }

@@ -8,10 +8,6 @@ export function Sidebar() {
       href: '/',
     },
     {
-      label: 'Login',
-      href: '/login',
-    },
-    {
       label: 'Charts',
       href: '/charts',
     },
