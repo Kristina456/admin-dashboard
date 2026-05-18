@@ -1,0 +1,9 @@
+@use '@/styles' as *;
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: $navigation-height;
+  align-items: center;
+}

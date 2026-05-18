@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import styles from './page.module.scss';
+import { Navigation } from '@/components/Navigation/Navigation.component';
+import { Sidebar } from '@/components/Sidebar/Sidebar.component';
 
 export const metadata: Metadata = {
   title: 'Dashboard layout',
@@ -13,9 +15,13 @@ export default function DashboardLayout({
 }>) {
   return (
     <div className={styles['dashboard-layout']}>
-      <nav className={styles['dashboard-layout__navigation']}>Navigation</nav>
+      <div className={styles['dashboard-layout__navigation']}>
+        <Navigation />
+      </div>
       <div className={styles['dashboard-layout__main']}>
-        <aside className={styles['dashboard-layout__sidebar']}>Sidebar</aside>
+        <div className={styles['dashboard-layout__sidebar']}>
+          <Sidebar />
+        </div>
         <main className={styles['dashboard-layout__main-section']}>{children}</main>
       </div>
     </div>

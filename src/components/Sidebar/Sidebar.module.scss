@@ -1,0 +1,14 @@
+@use '@/styles' as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    padding: 2rem;
+  }
+
+  &__link:hover {
+    background-color: $color-secondary;
+  }
+}
