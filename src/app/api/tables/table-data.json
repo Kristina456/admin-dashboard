@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5243099a-057b-4ad2-88a5-9d491bde4d3d",
+    "firstName": "Kristina",
+    "lastName": "Peršić",
+    "username": "@kristina",
+    "email": "kristina.persic@example.com",
+    "dateOfBirth": "2000-06-15"
+  },
+  {
+    "id": "84aebef2-dc31-45ac-85c7-286680e81258",
+    "firstName": "Marko",
+    "lastName": "Marić",
+    "username": "@marko",
+    "email": "marko.marić@example.com",
+    "dateOfBirth": "2400-09-10"
+  },
+  {
+    "id": "bad22ead-7402-4be7-b97a-9d0d3bc77a4f",
+    "firstName": "Ivana",
+    "lastName": "Ludvig",
+    "username": "@ivana",
+    "email": "ivana.ludvig@example.com",
+    "dateOfBirth": "1995-03-22"
+  },
+  {
+    "id": "576d7739-ba8b-4b34-984c-f32d3f32967e",
+    "firstName": "Marin",
+    "lastName": "Nikolić",
+    "username": "@marin",
+    "email": "marin.nikolic@example.com",
+    "dateOfBirth": "1988-11-05"
+  },
+  {
+    "id": "ac0c28ff-5452-415a-bc00-63913a0412c9",
+    "firstName": "Josip",
+    "lastName": "Marinović",
+    "username": "@josip",
+    "email": "josip.marinovic@example.com",
+    "dateOfBirth": "2002-01-30"
+  }
+]
