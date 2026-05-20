@@ -16,9 +16,11 @@
     flex: 1;
     background-color: $color-tertiary;
     padding: 2rem;
+    overflow-y: auto;
   }
 
   &__sidebar {
     width: 20rem;
+    height: 100%;
   }
 }

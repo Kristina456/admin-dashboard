@@ -1,4 +1,5 @@
 import { User } from '../../types/user.type';
+import styles from './UsersData.module.scss';
 
 interface Props {
   user: User[];
@@ -22,7 +23,7 @@ export function UsersData({
   handleEditUser,
 }: Props) {
   return (
-    <table>
+    <table className={styles['users-data']}>
       <thead>
         <tr>
           <th>Name</th>
@@ -110,7 +111,7 @@ export function UsersData({
                 {isEditing && editedUser?.id === item.id ? (
                   <>
                     <button onClick={e => handleUpdateUser(item, e)}>update</button>
-                    <button onClick={() => setIsEditing(false)}>x</button>
+                    <button onClick={() => setIsEditing(false)}>cancle</button>
                   </>
                 ) : (
                   <button onClick={() => handleEditUser(item)}>edit</button>
