@@ -1,7 +1,7 @@
 'use client';
 import { useUsers } from '@/hooks/useUsers';
 import { AddNewUser } from '../AddNewUser/AddNewUser.component';
-import { UsersData } from '../UsersData/UsersData.component';
+import { Users } from '../Users/Users.component';
 import styles from './Table.module.scss';
 
 export function Table() {
@@ -44,7 +44,7 @@ export function Table() {
         />
       </div>
       <div className={styles['table__user-data']}>
-        <UsersData
+        <Users
           user={user}
           isEditing={isEditing}
           editedUser={editedUser}

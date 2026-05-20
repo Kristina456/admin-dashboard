@@ -61,7 +61,7 @@ export function AddNewUser({ newUser, handleSetData, handleCreateUser, showModal
           </div>
         </div>
       )}
-      <button onClick={handleShowModal}>Add new data</button>
+      <button onClick={handleShowModal}>Add User</button>
     </div>
   );
 }
