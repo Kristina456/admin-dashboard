@@ -1,26 +1,44 @@
 @use '@/styles' as *;
 
-.dashboard-layout {
-  background-color: $color-primary;
-
-  &__navigation {
-    background-color: $color-secondary;
+.dashboard-page {
+  &__header {
+    margin: clamp(2rem, 6vw, 5rem) 0;
   }
 
-  &__main {
+  &__earnings {
     display: flex;
-    height: calc(100vh - $navigation-height);
+    margin: clamp(2rem, 6vw, 5rem) 0;
   }
 
-  &__main-section {
+  &__activities {
+    display: flex;
+    justify-content: space-between;
+
+    @include lg {
+      flex-direction: column-reverse;
+      gap: 2rem;
+    }
+  }
+
+  &__activity-chart {
     flex: 1;
-    background-color: $color-tertiary;
-    padding: 2rem;
-    overflow-y: auto;
-  }
+    position: relative;
+    box-shadow: $box-shadow-primary;
+    border-radius: 2rem;
+    margin-right: 2rem;
+    height: auto;
+    img {
+      padding: 2rem;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
 
-  &__sidebar {
-    width: 20rem;
-    height: 100%;
+    @include lg {
+      margin-right: 0;
+      flex: auto;
+      width: 100%;
+      height: clamp(20rem, 30vw, 50rem);
+    }
   }
 }

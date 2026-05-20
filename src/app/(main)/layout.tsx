@@ -3,7 +3,7 @@ import { Sidebar } from '@/components/Sidebar/Sidebar.component';
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
-import styles from './page.module.scss';
+import styles from './layout.module.scss';
 
 export const metadata: Metadata = {
   title: 'Dashboard layout',

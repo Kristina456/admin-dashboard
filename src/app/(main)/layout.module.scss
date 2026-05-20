@@ -1,0 +1,33 @@
+@use '@/styles' as *;
+
+.dashboard-layout {
+  overflow: hidden;
+
+  &__navigation {
+    background-color: $color-secondary;
+  }
+
+  &__main {
+    display: flex;
+    height: calc(100vh - $navigation-height);
+  }
+
+  &__main-section {
+    flex: 1;
+    background-color: $color-tertiary;
+    padding: 2rem;
+    overflow-y: auto;
+    @include sm {
+      padding-left: 3rem;
+    }
+  }
+
+  &__sidebar {
+    background-color: $color-primary;
+    @include sm {
+      position: absolute;
+      height: calc(100vh - $navigation-height);
+      z-index: 1;
+    }
+  }
+}

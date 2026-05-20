@@ -17,9 +17,9 @@ export function Table() {
     handleEditUser,
     handleUpdateUser,
     setIsEditing,
-    loading,
     showModal,
     setShowModal,
+    loading,
   } = useUsers();
 
   if (loading) {

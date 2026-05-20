@@ -1,0 +1,58 @@
+@use '@/styles' as *;
+
+.last-activities {
+  box-shadow: $box-shadow-primary;
+  padding: 2rem;
+  border-radius: $radius-1;
+
+  &__title {
+    margin-bottom: clamp(1rem, 2vw, 2rem);
+  }
+
+  &__activity-description {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__activity-wrapper {
+    @include lg {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__activity-card {
+    border-bottom: 1px solid $color-primary;
+    padding: clamp(1rem, 2vw, 2rem);
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    @include lg {
+      width: calc(100% / 2 - 6rem);
+      margin-right: 6rem;
+    }
+
+    @include md {
+      width: 100%;
+      margin-bottom: 0;
+    }
+  }
+
+  &__activity-wrapper:nth-last-of-type(2) {
+    border-bottom: unset;
+    margin-bottom: 2rem;
+  }
+
+  &__button {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 2rem;
+
+    button {
+      max-width: 30rem;
+      font-size: clamp(1.6rem, 20vw, 2rem);
+    }
+  }
+}

@@ -3,15 +3,19 @@
 .button {
   width: 100%;
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: $radius-1;
   border: none;
   cursor: pointer;
   font-size: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
+  transition: transform ease-in-out 0.3s;
 
   &:hover {
+    transform: scale(1.02);
+    transition: transform ease-in-out 0.3s;
     background-color: $color-secondary;
   }
 
@@ -19,6 +23,15 @@
     font-size: 1.5rem;
     border: 0.1rem solid $color-tertiary;
     background-color: $color-tertiary;
+    &:hover {
+      color: $color-tertiary;
+    }
+  }
+
+  &--secondary {
+    font-size: 1.5rem;
+    background-color: $color-blue-1;
+    color: #fff;
     &:hover {
       color: $color-tertiary;
     }

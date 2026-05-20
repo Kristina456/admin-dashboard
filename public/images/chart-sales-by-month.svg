@@ -1,0 +1,56 @@
+<svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+
+
+  <rect x="10" y="10" width="10" height="10" rx="2" fill="#124559"/>
+  <text x="25" y="20" font-size="12" fill="#124559">Revenue (€)</text>
+
+
+  <line x1="60" y1="270" x2="690" y2="270" stroke="#e5e4df" stroke-width="0.5"/>
+  <text x="40" y="274" font-size="11" fill="#124559" text-anchor="end">€0</text>
+ 
+  <line x1="60" y1="217" x2="690" y2="217" stroke="#e5e4df" stroke-width="0.5"/>
+  <text x="40" y="221" font-size="11" fill="#124559" text-anchor="end">€4k</text>
+
+  <line x1="60" y1="163" x2="690" y2="163" stroke="#e5e4df" stroke-width="0.5"/>
+  <text x="40" y="167" font-size="11" fill="#124559" text-anchor="end">€8k</text>
+
+  <line x1="60" y1="110" x2="690" y2="110" stroke="#e5e4df" stroke-width="0.5"/>
+  <text x="40" y="114" font-size="11" fill="#124559" text-anchor="end">€12k</text>
+ 
+  <line x1="60" y1="57" x2="690" y2="57" stroke="#e5e4df" stroke-width="0.5" stroke-dasharray="3,3"/>
+  <text x="40" y="61" font-size="11" fill="#124559" text-anchor="end">€16k</text>
+
+ 
+  <line x1="60" y1="270" x2="690" y2="270" stroke="#d3d1c7" stroke-width="1"/>
+
+
+  <polygon
+    points="60,180 217.5,174 375,158 532.5,149 690,105 690,270 60,270"
+    fill="#124559" opacity="0.6"/>
+
+
+  <polyline
+    points="60,180 217.5,174 375,158 532.5,149 690,105"
+    fill="none" stroke="#124559" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+
+
+  <circle cx="60" cy="180" r="4" fill="#124559" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="217.5" cy="174" r="4" fill="#124559" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="375" cy="158" r="4" fill="#124559" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="532.5" cy="149" r="4" fill="#124559" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="690" cy="105" r="5" fill="#124559" stroke="#ffffff" stroke-width="2"/>
+
+  <text x="60" y="170" font-size="11" fill="#124559" text-anchor="middle">€6.8k</text>
+  <text x="217.5" y="164" font-size="11" fill="#124559" text-anchor="middle">€7.2k</text>
+  <text x="375" y="148" font-size="11" fill="#124559" text-anchor="middle">€8.4k</text>
+  <text x="532.5" y="139" font-size="11" fill="#124559" text-anchor="middle">€9.1k</text>
+  <text x="690" y="95" font-size="11" fill="#124559" text-anchor="middle" font-weight="500">€12.5k</text>
+
+
+  <text x="60" y="288" font-size="12" fill="#124559" text-anchor="middle">Jan</text>
+  <text x="217.5" y="288" font-size="12" fill="#124559" text-anchor="middle">Feb</text>
+  <text x="375" y="288" font-size="12" fill="#124559" text-anchor="middle">Mar</text>
+  <text x="532.5" y="288" font-size="12" fill="#124559" text-anchor="middle">Apr</text>
+  <text x="690" y="288" font-size="12" fill="#124559" text-anchor="middle">May</text>
+
+</svg>
