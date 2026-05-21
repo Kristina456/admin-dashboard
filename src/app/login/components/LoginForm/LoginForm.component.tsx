@@ -5,13 +5,13 @@ import Link from 'next/link';
 import styles from './LoginForm.module.scss';
 import Image from 'next/image';
 import { Loading } from '@/components/Loading/Loading.component';
-import { ErrorWarning } from '@/components/ErrorWarning/ErrorWarning.component';
+import { Error } from '@/components/Error/Error.component';
 
 export function LoginForm() {
   const { userData, formError, fieldError, loading, handleInputChange, handleSubmit } = useLoginForm();
 
   if (formError) {
-    return <ErrorWarning />;
+    return <Error />;
   }
 
   if (loading) {

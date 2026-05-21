@@ -1,10 +1,10 @@
 'use client';
+import { ErrorWarning } from '@/components/ErrorWarning/ErrorWarning.component';
+import { Loading } from '@/components/Loading/Loading.component';
 import { useUsers } from '@/hooks/useUsers';
 import { AddNewUser } from '../AddNewUser/AddNewUser.component';
 import { Users } from '../Users/Users.component';
 import styles from './Table.module.scss';
-import { ErrorWarning } from '@/components/ErrorWarning/ErrorWarning.component';
-import { Loading } from '@/components/Loading/Loading.component';
 
 export function Table() {
   const {
@@ -22,11 +22,8 @@ export function Table() {
     showModal,
     setShowModal,
     loading,
+    setError,
   } = useUsers();
-
-  if (error) {
-    return <ErrorWarning />;
-  }
 
   if (loading) {
     return <Loading />;
@@ -47,6 +44,7 @@ export function Table() {
           handleCreateUser={handleCreateUser}
           showModal={showModal}
           setShowModal={setShowModal}
+          setError={setError}
         />
       </div>
       <div className={styles['table__user-data']}>
@@ -61,6 +59,7 @@ export function Table() {
           handleEditUser={handleEditUser}
         />
       </div>
+      {error && <ErrorWarning />}
     </div>
   );
 }

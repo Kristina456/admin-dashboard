@@ -146,5 +146,6 @@ export function useUsers() {
     loading,
     showModal,
     setShowModal,
+    setError,
   };
 }

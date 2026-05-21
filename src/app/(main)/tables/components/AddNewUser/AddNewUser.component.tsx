@@ -12,11 +12,13 @@ interface Props {
   handleCreateUser: (e: React.FormEvent<HTMLFormElement>) => void;
   showModal: boolean;
   setShowModal: (value: boolean) => void;
+  setError: (value: undefined) => void;
 }
 
-export function AddNewUser({ newUser, handleSetData, handleCreateUser, showModal, setShowModal }: Props) {
+export function AddNewUser({ newUser, handleSetData, handleCreateUser, showModal, setShowModal, setError }: Props) {
   function handleShowModal() {
     setShowModal(!showModal);
+    setError(undefined);
   }
 
   return (
