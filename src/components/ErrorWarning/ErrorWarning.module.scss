@@ -1,0 +1,46 @@
+@use '@/styles' as *;
+
+.error-warning {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  font-size: 3rem;
+  background-color: $background-modal-color-1;
+
+  p {
+    margin-bottom: 2rem;
+  }
+
+  &__wrapper {
+    color: $color-secondary;
+    text-align: center;
+    background-color: #fff;
+    padding: 6rem 8rem;
+    box-shadow: $box-shadow-primary;
+    border-radius: 2rem;
+  }
+
+  &__image {
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    font-size: 1.6rem;
+    color: $color-blue-2;
+    border: 1px solid $color-blue-2;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    transition: transform ease-in-out 0.3s;
+  }
+
+  &__link:hover {
+    background-color: $color-blue-3;
+    color: #fff;
+  }
+}

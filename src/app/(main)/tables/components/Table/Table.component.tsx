@@ -3,6 +3,8 @@ import { useUsers } from '@/hooks/useUsers';
 import { AddNewUser } from '../AddNewUser/AddNewUser.component';
 import { Users } from '../Users/Users.component';
 import styles from './Table.module.scss';
+import { ErrorWarning } from '@/components/ErrorWarning/ErrorWarning.component';
+import { Loading } from '@/components/Loading/Loading.component';
 
 export function Table() {
   const {
@@ -22,8 +24,12 @@ export function Table() {
     loading,
   } = useUsers();
 
+  if (error) {
+    return <ErrorWarning />;
+  }
+
   if (loading) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return (

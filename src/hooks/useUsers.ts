@@ -33,14 +33,19 @@ export function useUsers() {
     }
   };
 
+  const handleEditUser = (item: User) => {
+    setEditedUser(item);
+    setIsEditing(true);
+  };
+
   async function getUsers() {
     setLoading(true);
     try {
-      if (!process.env.NEXT_PUBLIC_API_URL) {
-        throw new Error('API_URL is not defined in the environment variables');
-      }
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/tables`);
       const responseData = await response.json();
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
       setUser(responseData);
     } catch (error) {
       if (error instanceof Error) {
@@ -54,13 +59,16 @@ export function useUsers() {
   async function handleCreateUser(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/tables`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/tables`, {
         method: 'POST',
         body: JSON.stringify(newUser),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
       });
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
       getUsers();
       setNewUser(emptyUser);
       setShowModal(false);
@@ -75,13 +83,15 @@ export function useUsers() {
 
   async function handleDeleteUser(item: User) {
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/tables/${item.id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/tables/${item.id}`, {
         method: 'DELETE',
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
       });
-
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
       await getUsers();
     } catch (error) {
       if (error instanceof Error) {
@@ -92,22 +102,20 @@ export function useUsers() {
     }
   }
 
-  const handleEditUser = (item: User) => {
-    setEditedUser(item);
-    setIsEditing(true);
-  };
-
   async function handleUpdateUser(item: User, e: React.MouseEvent<HTMLButtonElement>) {
     e.preventDefault();
     setIsEditing(false);
     try {
-      await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/tables/${item.id}`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}api/tables/${item.id}`, {
         method: 'PUT',
         body: JSON.stringify(editedUser),
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
         },
       });
+      if (!response.ok) {
+        throw new Error(`Request failed with status ${response.status}`);
+      }
       getUsers();
     } catch (error) {
       if (error instanceof Error) {
