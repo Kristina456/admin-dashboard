@@ -56,17 +56,19 @@ export function AddNewUser({ newUser, handleSetData, handleCreateUser, showModal
                 value={newUser.dateOfBirth}
                 onChange={e => handleSetData(e, 'dateOfBirth', true)}
               />
-              <button type="submit">Add</button>
+              <Button variant="ternary" type="submit">
+                Add
+              </Button>
             </form>
-            <button onClick={handleShowModal}>Cancel</button>
+            <Button variant="ternary" onClick={handleShowModal}>
+              Cancel
+            </Button>
           </div>
         </div>
       )}
-      <div className={styles['add-new-user__button-wrapper']}>
-        <Button className={styles['add-new-user__button']} variant="ternary" onClick={handleShowModal}>
-          +
-        </Button>
-      </div>
+      <Button className={styles['add-new-user__button']} variant="ternary" onClick={handleShowModal}>
+        +
+      </Button>
     </div>
   );
 }
