@@ -1,4 +1,9 @@
+@use '@/styles' as *;
+
 .settings-page {
+  &__title {
+    margin: $dashboard-title-margin 0;
+  }
   &__button {
     margin-top: 4rem;
     width: 30rem;

@@ -9,7 +9,7 @@ export default function SettingsPage() {
 
   return (
     <section className={styles['settings-page']}>
-      <h1>Settings page</h1>
+      <h1 className={styles['settings-page__title']}>Settings page</h1>
       <Button className={styles['settings-page__button']} variant="secondary" onClick={simulateFailure}>
         Simulate failure
       </Button>

@@ -21,13 +21,4 @@
       padding-left: 3rem;
     }
   }
-
-  &__sidebar {
-    background-color: $color-primary;
-    @include sm {
-      position: absolute;
-      height: calc(100vh - $navigation-height);
-      z-index: 1;
-    }
-  }
 }

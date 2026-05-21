@@ -49,7 +49,7 @@ export function LoginForm() {
           Sign in
         </Button>
       </form>
-      <Button type="button">
+      <Button type="button" variant="quaternary">
         <Image
           className={styles['login-form__google']}
           src="/images/google.svg"

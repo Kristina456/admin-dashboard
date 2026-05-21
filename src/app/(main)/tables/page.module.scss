@@ -1,5 +1,7 @@
+@use '@/styles' as *;
+
 .tables-page {
   &__title {
-    margin: 3rem 0;
+    margin: $dashboard-title-margin 0;
   }
 }

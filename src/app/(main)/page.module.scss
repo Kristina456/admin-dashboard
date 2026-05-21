@@ -2,7 +2,7 @@
 
 .dashboard-page {
   &__header {
-    margin: clamp(2rem, 6vw, 5rem) 0;
+    margin: $dashboard-title-margin 0;
   }
 
   &__earnings {
