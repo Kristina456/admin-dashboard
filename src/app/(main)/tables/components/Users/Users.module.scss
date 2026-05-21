@@ -1,32 +1,71 @@
 @use '@/styles' as *;
 
 .users {
-  background-color: rgb(187, 187, 187);
   width: 100%;
   table-layout: fixed;
+  min-width: 120rem;
+
+  td {
+    position: relative;
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    padding: 0.2rem 0.4rem;
+  }
+
   td,
   th {
-    border: 1px solid #ddd;
-    padding: 8px;
+    padding: 4px;
   }
 
   tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: $color-blue-6;
+  }
+
+  tr:nth-child(odd) {
+    background-color: $color-blue-7;
   }
 
   th {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 1rem 0.4rem;
     text-align: left;
-    background-color: #515151;
+    background-color: $color-blue-4;
     color: white;
   }
 
   th:nth-last-child(1) {
-    width: 8rem;
+    width: 9rem;
   }
 
   th:nth-last-child(2) {
-    width: 6rem;
+    width: 5rem;
+  }
+
+  th:nth-last-child(3) {
+    width: 12rem;
+  }
+
+  th:nth-child(3) {
+    width: 10%;
+  }
+  th:nth-child(1),
+  th:nth-child(2) {
+    width: 20%;
+  }
+
+  td:nth-last-child(1) {
+    display: flex;
+    gap: 0.2rem;
+  }
+
+  button {
+    /*  border: none;
+    cursor: pointer;
+    background: none; */
+    width: 4rem;
+    height: 4rem;
   }
 }

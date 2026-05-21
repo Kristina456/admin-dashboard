@@ -1,3 +1,4 @@
+import { Button } from '@/components/Button/Button.component';
 import styles from './AddNewUser.module.scss';
 
 interface Props {
@@ -61,7 +62,11 @@ export function AddNewUser({ newUser, handleSetData, handleCreateUser, showModal
           </div>
         </div>
       )}
-      <button onClick={handleShowModal}>Add User</button>
+      <div className={styles['add-new-user__button-wrapper']}>
+        <Button className={styles['add-new-user__button']} variant="ternary" onClick={handleShowModal}>
+          +
+        </Button>
+      </div>
     </div>
   );
 }

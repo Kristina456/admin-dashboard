@@ -2,6 +2,8 @@ import { ConfirmationModal } from '@/components/ConfirmationModal/ConfirmationMo
 import { useState } from 'react';
 import { User } from '../../types/user.type';
 import styles from './Users.module.scss';
+import Image from 'next/image';
+import { Button } from '@/components/Button/Button.component';
 
 interface Props {
   user: User[];
@@ -110,16 +112,40 @@ export function Users({
                   )}
                 </td>
                 <td>
-                  <button onClick={() => setItemToDelete(item)}>delete</button>
+                  <Button variant="ternary" onClick={() => setItemToDelete(item)}>
+                    <Image
+                      className={styles['users__image']}
+                      src="/images/delete.svg"
+                      alt="delete"
+                      width={25}
+                      height={20}
+                    />
+                  </Button>
                 </td>
                 <td>
                   {isEditing && editedUser?.id === item.id ? (
                     <>
-                      <button onClick={e => handleUpdateUser(item, e)}>update</button>
-                      <button onClick={() => setIsEditing(false)}>cancel</button>
+                      <Button
+                        variant="ternary"
+                        className={styles['users__image']}
+                        onClick={e => handleUpdateUser(item, e)}
+                      >
+                        <Image src="/images/update.svg" alt="update" width={25} height={20} />
+                      </Button>
+                      <Button variant="ternary" className={styles['users__image']} onClick={() => setIsEditing(false)}>
+                        <Image src="/images/cancel.svg" alt="cancel" width={25} height={20} />
+                      </Button>
                     </>
                   ) : (
-                    <button onClick={() => handleEditUser(item)}>edit</button>
+                    <Button variant="ternary" onClick={() => handleEditUser(item)}>
+                      <Image
+                        className={styles['users__image']}
+                        src="/images/edit.svg"
+                        alt="cancel"
+                        width={25}
+                        height={20}
+                      />
+                    </Button>
                   )}
                 </td>
               </tr>
