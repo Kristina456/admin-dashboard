@@ -1,7 +1,7 @@
+import { ConfirmationModal } from '@/components/ConfirmationModal/ConfirmationModal.component';
 import { useState } from 'react';
 import { User } from '../../types/user.type';
 import styles from './Users.module.scss';
-import { Button } from '@/components/Button/Button.component';
 
 interface Props {
   user: User[];
@@ -127,19 +127,11 @@ export function Users({
         </tbody>
       </table>
       {itemToDelete && (
-        <div className={styles['users__confirmation-modal']}>
-          <div className={styles['users__confirmation-modal-wrapper']}>
-            <p className={styles['users__confirmation-modal-text']}>Are you shure you want to delete user?</p>
-            <div className={styles['users__confirmation-modal-buttons']}>
-              <Button variant="secondary" onClick={() => itemToDelete && handleDeleteUser(itemToDelete)}>
-                confirm
-              </Button>
-              <Button variant="secondary" onClick={() => setItemToDelete(null)}>
-                close
-              </Button>
-            </div>
-          </div>
-        </div>
+        <ConfirmationModal
+          text={'Are you shure you want to delete user?'}
+          confirmButton={() => handleDeleteUser(itemToDelete)}
+          closeButton={() => setItemToDelete(null)}
+        />
       )}
     </div>
   );

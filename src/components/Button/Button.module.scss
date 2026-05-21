@@ -4,7 +4,6 @@
   width: 100%;
   padding: 1rem;
   border-radius: $radius-1;
-  border: 1px solid $color-gray-2;
   cursor: pointer;
   font-size: 1.6rem;
   display: flex;
@@ -13,6 +12,7 @@
   transform: scale(1);
   transition: transform ease-in-out 0.3s;
   background-color: transparent;
+  border: none;
 
   &:hover {
     transform: scale(1.02);
@@ -22,19 +22,20 @@
 
   &--primary {
     font-size: 1.5rem;
-    border: 0.1rem solid $color-tertiary;
     background-color: $color-tertiary;
     &:hover {
+      background-color: $color-secondary;
       color: $color-tertiary;
+      border: 1px solid $color-tertiary;
     }
   }
 
   &--secondary {
     font-size: 1.5rem;
-    background-color: $color-blue-1;
+    background-color: $color-blue-4;
     color: #fff;
     &:hover {
-      color: $color-tertiary;
+      background-color: $color-blue-1;
     }
   }
 

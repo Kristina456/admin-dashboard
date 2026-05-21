@@ -29,34 +29,4 @@
   th:nth-last-child(2) {
     width: 6rem;
   }
-
-  &__confirmation-modal {
-    background-color: $background-modal-color-1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__confirmation-modal-wrapper {
-    background-color: $color-blue-2;
-    padding: 4rem;
-    border-radius: 2rem;
-    color: #fff;
-  }
-
-  &__confirmation-modal-text {
-    margin-bottom: 2rem;
-    font-size: 2.4rem;
-  }
-
-  &__confirmation-modal-buttons {
-    display: flex;
-    gap: 1rem;
-  }
 }
