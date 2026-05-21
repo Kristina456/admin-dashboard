@@ -17,8 +17,8 @@ export function Sidebar() {
       href: '/tables',
     },
     {
-      label: 'Charts',
-      href: '/charts',
+      label: 'Settings',
+      href: '/settings',
     },
   ];
 

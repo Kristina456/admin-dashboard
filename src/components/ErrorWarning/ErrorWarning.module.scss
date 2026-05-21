@@ -4,17 +4,20 @@
   position: absolute;
   right: 0;
   top: 0;
+  cursor: pointer;
 
   p {
     margin-bottom: 1rem;
   }
 
   &__wrapper {
+    display: flex;
+    gap: 2rem;
     margin-top: 1rem;
     color: $color-secondary;
     background-color: $color-red-1;
     color: #fff;
-    padding: 2rem 4rem;
+    padding: 2rem 2rem;
     box-shadow: $box-shadow-primary;
     border-radius: 1rem 0 0 1rem;
   }

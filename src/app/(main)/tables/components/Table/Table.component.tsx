@@ -44,7 +44,6 @@ export function Table() {
           handleCreateUser={handleCreateUser}
           showModal={showModal}
           setShowModal={setShowModal}
-          setError={setError}
         />
       </div>
       <div className={styles['table__user-data']}>
@@ -59,7 +58,7 @@ export function Table() {
           handleEditUser={handleEditUser}
         />
       </div>
-      {error && <ErrorWarning />}
+      {error && <ErrorWarning errorAction={() => setError(undefined)} />}
     </div>
   );
 }
