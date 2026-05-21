@@ -1,7 +1,7 @@
 import styles from './Button.module.scss';
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'ternary';
 }
 
 export function Button({ children, variant, className, ...props }: Props) {

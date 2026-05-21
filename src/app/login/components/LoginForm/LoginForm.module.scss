@@ -1,12 +1,108 @@
+@use '@/styles' as *;
+
 .login-form {
+  @include md {
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    padding: 2rem;
+    margin: 1.5rem;
+  }
+
   &__form {
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
   }
 
+  &__title-wrapper {
+    text-align: center;
+    margin-bottom: clamp(3rem, 4vw, 5rem);
+  }
+
+  &__title {
+    font-size: clamp(2.8rem, 3vw, 3.2rem);
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin: 0 2rem;
+  }
+
   &__label,
   &__link {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__label:nth-of-type(1),
+  &__label:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    input {
+      height: 4rem;
+      padding: 1rem;
+      border-color: $color-gray-2;
+      border-radius: 0.8rem;
+      border-width: 0.1rem;
+      border-style: solid;
+    }
+  }
+
+  &__inputs-wrapper {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+
+  &__forgot-pass {
+    margin-bottom: 0;
+    color: $color-blue-3;
+    font-size: clamp(1rem, 4vw, 1.6rem);
+    &:hover {
+      color: $color-blue-4;
+    }
+  }
+
+  &__label-remember-me {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(0.2rem, 1vw, 1rem);
+    font-size: clamp(1rem, 4vw, 1.6rem);
+  }
+
+  &__label-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  &__sign-up {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  &__sign-up-link {
+    margin-left: 0.5rem;
+    color: $color-blue-3;
+    &:hover {
+      color: $color-blue-4;
+    }
+  }
+
+  &__google {
+    margin-right: 1rem;
+  }
+
+  input[type='checkbox'] {
+    accent-color: $color-blue-3;
+  }
+
+  &__field-error {
+    font-size: clamp(1rem, 4vw, 1.6rem);
+    color: $color-red-1;
+    position: absolute;
+    bottom: -1rem;
   }
 }

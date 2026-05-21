@@ -14,11 +14,13 @@ export default async function LoginPage() {
 
   return (
     <main className={styles['login-page']}>
-      <div className={styles['login-page__image']}>
-        <Image src="/images/dashboard.jpg" fill alt="Dashboard image" loading="eager" sizes="50vw" />
-      </div>
-      <div className={styles['login-page__form']}>
-        <LoginForm />
+      <div className={styles['login-page__wrapper']}>
+        <div className={styles['login-page__image']}>
+          <Image src="/images/dashboard.jpg" fill alt="Dashboard image" loading="eager" sizes="50vw" />
+        </div>
+        <div className={styles['login-page__form']}>
+          <LoginForm />
+        </div>
       </div>
     </main>
   );

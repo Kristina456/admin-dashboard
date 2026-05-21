@@ -2,21 +2,22 @@
 
 .button {
   width: 100%;
-  padding: 2rem;
+  padding: 1rem;
   border-radius: $radius-1;
-  border: none;
+  border: 1px solid $color-gray-2;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   transform: scale(1);
   transition: transform ease-in-out 0.3s;
+  background-color: transparent;
 
   &:hover {
     transform: scale(1.02);
     transition: transform ease-in-out 0.3s;
-    background-color: $color-secondary;
+    border-color: $color-gray-2;
   }
 
   &--primary {
@@ -34,6 +35,14 @@
     color: #fff;
     &:hover {
       color: $color-tertiary;
+    }
+  }
+
+  &--ternary {
+    background-color: $color-blue-5;
+    color: #fff;
+    &:hover {
+      background-color: $color-blue-4;
     }
   }
 }
