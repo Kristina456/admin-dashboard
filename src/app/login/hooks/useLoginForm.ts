@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { loginAction } from '@/lib/auth-api';
+import { loginApi } from '@/lib/auth-api';
 
 export function useLoginForm() {
   const router = useRouter();
@@ -36,7 +36,7 @@ export function useLoginForm() {
     setLoading(true);
 
     try {
-      const response = await loginAction(userData.email, userData.password);
+      const response = await loginApi(userData.email, userData.password);
       if (response.success) {
         router.push('/');
         return;

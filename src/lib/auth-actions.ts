@@ -2,7 +2,7 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-export async function fakeLogin(email: string, password: string) {
+export async function loginUser(email: string, password: string) {
   return await new Promise<{ token: string }>(resolve => {
     if (!email && !password) {
       throw new Error('Invalid credentials');

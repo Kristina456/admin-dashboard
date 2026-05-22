@@ -1,10 +1,10 @@
 'use server';
 import { cookies } from 'next/headers';
-import { fakeLogin } from './auth-actions';
+import { loginUser } from './auth-actions';
 
-export async function loginAction(email: string, password: string) {
+export async function loginApi(email: string, password: string) {
   try {
-    const response = await fakeLogin(email, password);
+    const response = await loginUser(email, password);
 
     const cookieStore = await cookies();
     cookieStore.set('access_token', response.token, {

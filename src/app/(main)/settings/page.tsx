@@ -1,8 +1,8 @@
 'use client';
 import styles from './page.module.scss';
 import { Button } from '@/components/Button/Button.component';
-import { ErrorWarning } from '@/components/ErrorWarning/ErrorWarning.component';
-import { useFailure } from '@/hooks/useFailure';
+import { ErrorModal } from '@/components/ErrorModal/ErrorModal.component';
+import { useFailure } from '@/app/(main)/settings/hooks/useFailure';
 
 export default function SettingsPage() {
   const { error, simulateFailure, setError } = useFailure();
@@ -13,7 +13,7 @@ export default function SettingsPage() {
       <Button className={styles['settings-page__button']} variant="secondary" onClick={simulateFailure}>
         Simulate failure
       </Button>
-      {error && <ErrorWarning errorAction={() => setError(undefined)} />}
+      {error && <ErrorModal errorAction={() => setError(undefined)} />}
     </section>
   );
 }

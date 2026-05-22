@@ -22,7 +22,7 @@ export default function DashboardPage() {
       </section>
       <div className={styles['dashboard-page__activities']}>
         <section className={styles['dashboard-page__activity-chart']}>
-          <Image src="/images/chart-sales-by-month.svg" alt="Chart sale" fill sizes="40px" />
+          <Image src="/images/chart-sales-by-month.svg" alt="Chart sale" fill sizes="40px" loading="lazy" />
         </section>
         <section className={styles['dashboard-page__activities-list']}>
           <LastActivities

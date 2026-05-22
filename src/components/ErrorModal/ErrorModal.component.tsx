@@ -1,13 +1,13 @@
-import styles from './ErrorWarning.module.scss';
+import styles from './ErrorModal.module.scss';
 
 interface Props {
   errorAction?: () => void;
 }
 
-export function ErrorWarning({ errorAction }: Props) {
+export function ErrorModal({ errorAction }: Props) {
   return (
-    <div className={styles['error-warning']} onClick={errorAction}>
-      <div className={styles['error-warning__wrapper']}>
+    <div className={styles['error-modal']} onClick={errorAction}>
+      <div className={styles['error-modal__wrapper']}>
         <div>x</div>
         <div>
           <p>Something went wrong!</p>

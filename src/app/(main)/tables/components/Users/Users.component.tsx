@@ -38,8 +38,12 @@ export function Users({
             <th>Username</th>
             <th>E-mail</th>
             <th>Date of birth</th>
-            <th></th>
-            <th></th>
+            <th>
+              <span>Button</span>
+            </th>
+            <th>
+              <span>Button</span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -130,10 +134,10 @@ export function Users({
                         className={styles['users__image']}
                         onClick={e => handleUpdateUser(item, e)}
                       >
-                        <Image src="/images/update.svg" alt="update" width={25} height={20} />
+                        <Image src="/images/update.svg" alt="Update" width={20} height={20} />
                       </Button>
                       <Button variant="ternary" className={styles['users__image']} onClick={() => setIsEditing(false)}>
-                        <Image src="/images/cancel.svg" alt="cancel" width={25} height={20} />
+                        <Image src="/images/cancel.svg" alt="Cancel" width={20} height={20} />
                       </Button>
                     </>
                   ) : (
@@ -141,8 +145,8 @@ export function Users({
                       <Image
                         className={styles['users__image']}
                         src="/images/edit.svg"
-                        alt="cancel"
-                        width={25}
+                        alt="Edit"
+                        width={20}
                         height={20}
                       />
                     </Button>

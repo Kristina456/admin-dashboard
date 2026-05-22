@@ -1,5 +1,5 @@
-import { Navigation } from '@/components/Navigation/Navigation.component';
-import { Sidebar } from '@/components/Sidebar/Sidebar.component';
+import { Navigation } from '@/app/(main)/components/Navigation/Navigation.component';
+import { Sidebar } from '@/app/(main)/components/Sidebar/Sidebar.component';
 import type { Metadata } from 'next';
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';

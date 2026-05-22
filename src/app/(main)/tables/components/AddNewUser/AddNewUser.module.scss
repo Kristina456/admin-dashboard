@@ -38,7 +38,7 @@
   input {
     height: 4rem;
     padding: 1rem;
-    border-radius: 1rem;
+    border-radius: $radius-1;
   }
 
   &__button {

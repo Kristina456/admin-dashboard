@@ -1,11 +1,26 @@
 @use '@/styles' as *;
 
 .login-form {
+  border-radius: 0 1rem 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
   @include md {
-    background-color: rgb(255, 255, 255);
-    border-radius: 2rem;
-    padding: 2rem;
-    margin: 1.5rem;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: $radius-1;
+  }
+
+  &__wrapper {
+    padding: 4rem;
+    @include md {
+      padding: 4rem 2rem;
+      background-color: $color-tertiary;
+      border-radius: 2rem;
+      margin: 1.5rem;
+    }
   }
 
   &__form {

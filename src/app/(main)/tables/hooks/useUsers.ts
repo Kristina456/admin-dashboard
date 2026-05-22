@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { User } from './../app/(main)/tables/types/user.type';
+import { User } from '../types/user.type';
 
 export const emptyUser = {
   id: '',

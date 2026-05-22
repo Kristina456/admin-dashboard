@@ -1,6 +1,6 @@
 @use '@/styles' as *;
 
-.error-warning {
+.error-modal {
   position: absolute;
   right: 0;
   top: 0;
@@ -19,6 +19,6 @@
     color: #fff;
     padding: 2rem 2rem;
     box-shadow: $box-shadow-primary;
-    border-radius: 1rem 0 0 1rem;
+    border-radius: $radius-1 0 0 $radius-1;
   }
 }

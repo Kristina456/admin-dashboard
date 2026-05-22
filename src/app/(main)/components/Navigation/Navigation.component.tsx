@@ -1,7 +1,7 @@
 import { logoutUser } from '@/lib/auth-actions';
 import styles from './Navigation.module.scss';
 import Image from 'next/image';
-import { Button } from '../Button/Button.component';
+import { Button } from '../../../../components/Button/Button.component';
 
 export function Navigation() {
   return (
@@ -11,7 +11,7 @@ export function Navigation() {
         <Button className={styles['navigation__button']} variant="primary" onClick={logoutUser}>
           Log out
         </Button>
-        <Image src="/images/user-profile-icon.svg" alt="Company logo" width={30} height={30} />
+        <Image src="/images/user-profile-icon.svg" alt="User" width={30} height={30} />
       </div>
     </nav>
   );

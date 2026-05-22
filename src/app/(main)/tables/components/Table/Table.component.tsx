@@ -1,7 +1,7 @@
 'use client';
-import { ErrorWarning } from '@/components/ErrorWarning/ErrorWarning.component';
+import { ErrorModal } from '@/components/ErrorModal/ErrorModal.component';
 import { Loading } from '@/components/Loading/Loading.component';
-import { useUsers } from '@/hooks/useUsers';
+import { useUsers } from '@/app/(main)/tables/hooks/useUsers';
 import { AddNewUser } from '../AddNewUser/AddNewUser.component';
 import { Users } from '../Users/Users.component';
 import styles from './Table.module.scss';
@@ -58,7 +58,7 @@ export function Table() {
           handleEditUser={handleEditUser}
         />
       </div>
-      {error && <ErrorWarning errorAction={() => setError(undefined)} />}
+      {error && <ErrorModal errorAction={() => setError(undefined)} />}
     </div>
   );
 }

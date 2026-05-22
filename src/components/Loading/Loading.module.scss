@@ -9,14 +9,14 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   font-size: 3rem;
   background-color: $color-white-1;
 
   &__wrapper {
     color: $color-secondary;
     text-align: center;
-    background-color: #fff;
+    background-color: $color-tertiary;
     padding: 2rem 8rem;
     box-shadow: $box-shadow-primary;
     border-radius: 2rem;
