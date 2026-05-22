@@ -61,3 +61,27 @@ Example value: `NEXT_PUBLIC_API_URL=http://localhost:3000/`
 17. Added styling for the new user modal
 18. Made final corrections
 19. Update readme
+
+###
+
+## Which parts did you prioritize and why?
+
+At the beginning I just wanted to get the main features working, so I focused on things like login, user management and layout before spending too much time on styling.
+
+The project structure and components were organized in a way that keeps the code cleaner and easier to reuse. Additional attention was given to user experience by adding confirmation modals, loading states, and error handling to prevent accidental actions and improve usability.
+
+The final phase included UI polishing, fixing layout issues, improving styling consistency.
+
+## What challenges did you encounter?
+
+During development, one of the main challenges was organizing the application structure in a way that kept the code clean and reusable as the project grew. Separating logic into smaller components required additional refactoring but improved maintainability.
+
+Another challenge was handling application states and API errors properly.
+
+Managing user interactions was also important, especially preventing accidental actions such as deleting users, which led to adding confirmation modals.
+
+The final challenges were mostly related to styling consistency, layout spacing, and fixing smaller UI bugs across different components and pages.
+
+## What would you add or improve if you had more time?
+
+I would also spend additional time refining the UI and overall user experience.
